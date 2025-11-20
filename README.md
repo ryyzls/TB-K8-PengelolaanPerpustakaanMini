@@ -13,14 +13,7 @@ Randi Abdiansyah (251402138) - rolemenyusul
 Rasyd Arija Azron Ritonga (251402020) - rolemenyusul
 
 Struktur Folder:
-
-/src
- //filemenyusul.c
- //filemenyusul.c
- //filemenyusul.c
-/include
- //filemenyusul.c
- //filemenyusul.c
+//menyusul
 
 Catatan:
 
