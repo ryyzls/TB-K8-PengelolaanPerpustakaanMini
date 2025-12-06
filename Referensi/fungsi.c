@@ -76,6 +76,26 @@ void hapusBuku() {
     printf(GREEN"Buku berhasil dihapus!\n"RESET);
 }
 
+void editBuku() {
+    int id;
+    printf(YELLOW"Masukkan ID buku yang ingin diedit: "RESET);
+    scanf("%d", &id);
+    getchar();
+
+    int index = -1;
+    for(int i=0; i<jumlah; i++) {
+        if(daftar[i].id == id) {
+            index = i;
+            break;
+        }
+    }
+
+    if(index == -1) {
+        printf(RED"ID tidak ditemukan!\n"RESET);
+        return;
+    }
+
+
 
 
 
