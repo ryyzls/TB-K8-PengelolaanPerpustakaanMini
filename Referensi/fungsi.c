@@ -48,4 +48,20 @@ printf("\n"BLUE"================================================================
 printf(BLUE"======================================================================\n"RESET);
 }
 
+void hapusBuku() {
+    int id;
+    printf(YELLOW"Masukkan ID buku yang ingin dihapus: "RESET);
+    scanf("%d", &id);
+    getchar();
+
+    int index = -1;
+    for(int i=0; i<jumlah; i++) {
+        if(daftar[i].id == id) {
+            index = i;
+            break;
+        }
+    }
+
+
+
 
