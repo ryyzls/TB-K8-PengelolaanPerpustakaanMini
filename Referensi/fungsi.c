@@ -144,6 +144,35 @@ void cariBuku() {
             }
         }
     }
+else if(pilih == 2) {
+        printf("Masukkan Penulis: ");
+        fgets(keyword, 50, stdin);
+        keyword[strcspn(keyword, "\n")] = 0;
+
+        for(int i=0; i<jumlah; i++) {
+            if(strstr(daftar[i].penulis, keyword)) {
+                printf("%d. Judul Buku : %s\n   Penulis    : %s \n   Tahun      : %d\n",
+                    daftar[i].id, daftar[i].judul, daftar[i].penulis, daftar[i].tahun);
+                ditemukan = 1;
+            }
+        }
+    }
+    else if(pilih == 3) {
+        printf("Masukkan Tahun: ");
+        scanf("%d", &tahunCari);
+        getchar();
+
+        for(int i=0; i<jumlah; i++) {
+            if(daftar[i].tahun == tahunCari) {
+                printf("%d. Judul Buku : %s\n   Penulis    : %s \n   Tahun      : %d\n",
+                    daftar[i].id, daftar[i].judul, daftar[i].penulis, daftar[i].tahun);
+                ditemukan = 1;
+            }
+        }
+    }
+
+    if(!ditemukan) printf(RED"Tidak ada buku yang cocok.\n"RESET);
+}
 
 
 
