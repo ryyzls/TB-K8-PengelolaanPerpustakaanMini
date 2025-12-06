@@ -94,6 +94,56 @@ void editBuku() {
         printf(RED"ID tidak ditemukan!\n"RESET);
         return;
     }
+   inputJudul(daftar[index].judul);
+    inputPenulis(daftar[index].penulis);
+    daftar[index].tahun = inputTahun();
+
+    printf(GREEN"Buku berhasil diedit!\n"GREEN);
+}
+
+void cariBuku() {
+    if(jumlah == 0) {
+        printf(RED"Tidak ada buku untuk dicari.\n"RED);
+        return;
+    }
+
+    int pilih;
+    printf("\n"BLUE"======================\n");
+    printf("| Cari Berdasarkan:  |\n");
+    printf("======================\n"RESET);
+    printf(BLUE"|"RESET YELLOW" 1. Judul Buku      "RESET BLUE"|\n"RESET);
+    printf(BLUE"|"RESET YELLOW" 2. Penulis         "RESET BLUE"|\n"RESET);
+    printf(BLUE"|"RESET YELLOW" 3. Tahun           "RESET BLUE"|\n"RESET);
+    printf(BLUE"|"RESET MAGENTA" 4. Kembali ke Menu "RESET BLUE"|\n"RESET);
+    printf(BLUE"======================\n"RESET);
+    printf(BLUE"Pilih: "RESET);
+    scanf("%d", &pilih);
+    getchar();
+
+    if(pilih == 4) {
+        // langsung kembali ke menu
+        return;
+    }
+    
+    char keyword[50];
+    int tahunCari;
+    int ditemukan = 0;
+
+    printf("\n=== HASIL PENCARIAN ===\n");
+
+    if(pilih == 1) {
+        printf("Masukkan Judul Buku: ");
+        fgets(keyword, 50, stdin);
+        keyword[strcspn(keyword, "\n")] = 0;
+
+        for(int i=0; i<jumlah; i++) {
+            if(strstr(daftar[i].judul, keyword)) {
+                printf("%d. Judul Buku : %s\n   Penulis    : %s \n   Tahun      : %d\n",
+                    daftar[i].id, daftar[i].judul, daftar[i].penulis, daftar[i].tahun);
+                ditemukan = 1;
+            }
+        }
+    }
 
 
 
