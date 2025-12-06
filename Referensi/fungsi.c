@@ -62,6 +62,22 @@ void hapusBuku() {
         }
     }
 
+    if(index == -1) {
+        printf(RED"ID tidak ditemukan!\n"RESET);
+        return;
+    }
+
+    for(int i=index; i<jumlah-1; i++) {
+        daftar[i] = daftar[i+1];
+        daftar[i].id = i + 1;
+    }
+
+    jumlah--;
+    printf(GREEN"Buku berhasil dihapus!\n"RESET);
+}
+
+
+
 
 
 
