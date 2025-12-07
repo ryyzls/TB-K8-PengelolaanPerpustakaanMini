@@ -19,3 +19,23 @@ struct Buku {
 
 struct Buku daftar[MAX];
 int jumlah = 0;
+
+void inputJudul(char *judul) {
+    printf(YELLOW"Masukkan Judul Buku   : "RESET);
+    fgets(judul, 50, stdin);
+    judul[strcspn(judul, "\n")] = 0;
+}
+
+void inputPenulis(char *penulis) {
+    printf(YELLOW"Masukkan Penulis      : "RESET);
+    fgets(penulis, 50, stdin);
+    penulis[strcspn(penulis, "\n")] = 0;
+}
+
+int inputTahun() {
+    int tahun;
+    printf(YELLOW"Masukkan Tahun Terbit : "RESET);
+    scanf("%d", &tahun);
+    getchar();
+    return tahun;
+}
