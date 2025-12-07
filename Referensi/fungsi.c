@@ -10,31 +10,31 @@
 #define CYAN    "\x1b[36m"
 #define RESET   "\x1b[0m"
 
-void tambahbuku()
-{
-  struct buku b;
-  b.id = jumlah + 1;
+// =======================
+// Rasyid, Dwi: FUNGSI
+// =======================
 
-  inputjudul(b.judul);
-  inputpenulis(b.penulis);
-  b.tahun = inputTahun();
+void tambahBuku() {
+    struct Buku b;
+    b.id = jumlah + 1;
 
-  daftar[jumlah] = b;
-  jumlah++;
+    inputJudul(b.judul);
+    inputPenulis(b.penulis);
+    b.tahun = inputTahun();
 
-  printf(GREEN"Buku berhasil di tambahkan!\n"RESET);
+    daftar[jumlah] = b;
+    jumlah++;
+
+    printf(GREEN"Buku berhasil ditambahkan!\n"RESET);
 }
 
-void tampilkanBuku() 
-{
-  if(jumlah == 0)
-  {
-    printf(RED"Belum ada buku.\n"RESET);
-    return;
-  }
+void tampilkanBuku() {
+    if(jumlah == 0) {
+        printf(RED"Belum ada buku.\n"RESET);
+        return;
+    }
 
-
-printf("\n"BLUE"======================================================================\n");
+    printf("\n"BLUE"======================================================================\n");
     printf("| %-2s | %-30s | %-20s | %-4s |\n", "ID", "Judul Buku", "Penulis", "Tahun");
     printf("======================================================================\n"RESET);
 
@@ -45,7 +45,7 @@ printf("\n"BLUE"================================================================
             daftar[i].penulis,
             daftar[i].tahun);
     }
-printf(BLUE"======================================================================\n"RESET);
+    printf(BLUE"======================================================================\n"RESET);
 }
 
 void hapusBuku() {
@@ -94,7 +94,8 @@ void editBuku() {
         printf(RED"ID tidak ditemukan!\n"RESET);
         return;
     }
-   inputJudul(daftar[index].judul);
+
+    inputJudul(daftar[index].judul);
     inputPenulis(daftar[index].penulis);
     daftar[index].tahun = inputTahun();
 
@@ -144,7 +145,7 @@ void cariBuku() {
             }
         }
     }
-else if(pilih == 2) {
+    else if(pilih == 2) {
         printf("Masukkan Penulis: ");
         fgets(keyword, 50, stdin);
         keyword[strcspn(keyword, "\n")] = 0;
@@ -173,10 +174,3 @@ else if(pilih == 2) {
 
     if(!ditemukan) printf(RED"Tidak ada buku yang cocok.\n"RESET);
 }
-
-
-
-
-
-
-
