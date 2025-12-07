@@ -9,3 +9,13 @@
 #define MAGENTA "\x1b[35m"
 #define CYAN    "\x1b[36m"
 #define RESET   "\x1b[0m"
+
+struct Buku {
+    int id;
+    char judul[50];
+    char penulis[50];
+    int tahun;
+};
+
+struct Buku daftar[MAX];
+int jumlah = 0;
