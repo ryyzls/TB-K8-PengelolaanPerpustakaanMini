@@ -23,5 +23,5 @@ File Handling
 
 Catatan:
 Input/Output: Dwi
-
+Keputusan: Randi
 
