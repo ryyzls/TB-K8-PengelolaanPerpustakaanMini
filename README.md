@@ -26,6 +26,8 @@ Input/Output: Dzakwan
 Keputusan: Randi
 Perulangan: Dwi
 Struct: Jesqueen
+Fungsi: Rasyid
+File Handling: Rizal
 
 
 
