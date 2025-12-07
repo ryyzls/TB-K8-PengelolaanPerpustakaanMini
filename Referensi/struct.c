@@ -13,7 +13,7 @@
 // =======================
 // Jesqueen: STRUCT
 // =======================
-struct Buku {
+struct Buku { 
     int id;
     char judul[50];
     char penulis[50];
@@ -22,4 +22,5 @@ struct Buku {
 
 struct Buku daftar[MAX];
 int jumlah = 0;
+
 
