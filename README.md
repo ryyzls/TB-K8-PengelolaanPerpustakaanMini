@@ -25,5 +25,7 @@ Catatan:
 Input/Output: Dzakwan
 Keputusan: Randi
 Perulangan: Dwi
+Struct: Jesqueen
+
 
 
