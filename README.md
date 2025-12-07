@@ -27,7 +27,7 @@ Keputusan: Randi
 Perulangan: Dwi
 Struct: Jesqueen
 Fungsi: Rasyid
-File Handling: Riza
+File Handling: Rizal
 
 
 
