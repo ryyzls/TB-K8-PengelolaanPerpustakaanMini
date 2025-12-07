@@ -22,6 +22,8 @@ Fungsi
 File Handling
 
 Catatan:
-Input/Output: Dwi
+Input/Output: Dzakwan
 Keputusan: Randi
+Perulangan: Dwi
+
 
