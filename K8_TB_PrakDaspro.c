@@ -43,9 +43,19 @@ void inputPenulis(char *penulis) {
 
 int inputTahun() {
     int tahun;
-    printf(YELLOW"Masukkan Tahun Terbit : "RESET);
-    scanf("%d", &tahun);
-    getchar();
+    do
+    {
+        printf(YELLOW"Masukkan Tahun Terbit : "RESET);
+        scanf("%d", &tahun);
+        getchar();
+
+        if (tahun < 1000 || tahun > 9999)
+        {
+            printf(RED"Tahun harus 4 digit!\n"RESET);
+        }
+        
+    } while (tahun < 1000 || tahun > 9999);
+
     return tahun;
 }
 
