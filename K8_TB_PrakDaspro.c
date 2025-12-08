@@ -279,4 +279,11 @@ void prosesPilihan(int pilih) {
         cariBuku();           
     } else if(pilih == 6) {
         simpanFile();
+    } else if(pilih == 7) {
+        muatFile();           
+    } else if(pilih == 0) {
+        printf(RED"Keluar dari program...\n"RESET);
+    } else {
+        printf(RED"Menu tidak valid!\n"RESET);
     }
+}
