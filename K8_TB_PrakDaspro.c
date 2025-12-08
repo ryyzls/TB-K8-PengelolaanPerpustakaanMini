@@ -266,21 +266,22 @@ void muatFile() {
     printf(GREEN"Data berhasil dimuat dari file!\n"RESET);
 }
 
-void prosesPilihan(int pilih) {
+void prosesPilihan(int pilih) 
+{
     if(pilih == 1) {
-        tambahBuku();         
+        tambahBuku();         // Orang 5
     } else if(pilih == 2) {
-        tampilkanBuku();      
+        tampilkanBuku();      // Orang 5
     } else if(pilih == 3) {
-        hapusBuku();          
+        hapusBuku();          // Orang 5
     } else if(pilih == 4) {
-        editBuku();           
+        editBuku();           // Orang 5
     } else if(pilih == 5) {
-        cariBuku();           
+        cariBuku();           // Orang 5
     } else if(pilih == 6) {
-        simpanFile();
+        simpanFile();         // Orang 6
     } else if(pilih == 7) {
-        muatFile();           
+        muatFile();           // Orang 6
     } else if(pilih == 0) {
         printf(RED"Keluar dari program...\n"RESET);
     } else {
