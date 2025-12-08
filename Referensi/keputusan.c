@@ -13,7 +13,8 @@
 // =======================
 // Randi: KEPUTUSAN
 // =======================
-void prosesPilihan(int pilih) {
+void prosesPilihan(int pilih) 
+{
     if(pilih == 1) {
         tambahBuku();         // Orang 5
     } else if(pilih == 2) {
@@ -34,4 +35,3 @@ void prosesPilihan(int pilih) {
         printf(RED"Menu tidak valid!\n"RESET);
     }
 }
-
