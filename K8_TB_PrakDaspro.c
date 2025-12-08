@@ -1,3 +1,12 @@
+// Kelompok 8 - Pengelolaan Perpustakaan Mini
+// Anggota Kelompok :
+// Dwi Charima Husni                (251402088)
+// Jesqueen Maria Purba             (251402099)
+// Fahri Arizal                     (251402102)
+// Muhammad Dzakwan Ismail Rangkuti (251402014)
+// Rasyid Arija Azron Ritonga       (251402020)
+// Randi Abdiansyah                 (251402138)
+
 #include <stdio.h>
 #include <string.h>
 #define MAX 100
