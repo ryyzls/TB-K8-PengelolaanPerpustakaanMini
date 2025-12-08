@@ -21,3 +21,11 @@ void inputPenulis(char *penulis) {
     fgets(penulis, 50, stdin);
     penulis[strcspn(penulis, "\n")] = 0;
 }
+
+int inputTahun() {
+    int tahun;
+    printf(YELLOW"Masukkan Tahun Terbit : "RESET);
+    scanf("%d", &tahun);
+    getchar();
+    return tahun;
+}
