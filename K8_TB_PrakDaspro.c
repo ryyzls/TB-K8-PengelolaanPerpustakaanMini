@@ -215,3 +215,23 @@ void cariBuku() {
 
     if(!ditemukan) printf(RED"Tidak ada buku yang cocok.\n"RESET);
 }
+
+void simpanFile() {
+    FILE *file = fopen("buku.txt", "w");
+
+    if(file == NULL) {
+        printf(RED"Gagal membuka file!\n"RESET);
+        return;
+    }
+
+    for(int i=0; i<jumlah; i++) {
+        fprintf(file, "%d|%s|%s|%d\n",
+            daftar[i].id,
+            daftar[i].judul,
+            daftar[i].penulis,
+            daftar[i].tahun);
+    }
+
+    fclose(file);
+    printf(GREEN"Data berhasil disimpan ke file!\n"GREEN);
+}
