@@ -299,9 +299,7 @@ void loopProgram() {
     } while(pilih != 0);
 }
 
-// =======================
 // PROGRAM UTAMA
-// =======================
 int main() {
     loopProgram();   // Orang 4
     return 0;
