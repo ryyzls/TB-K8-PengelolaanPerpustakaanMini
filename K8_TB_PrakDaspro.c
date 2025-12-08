@@ -39,6 +39,7 @@ int inputTahun() {
     getchar();
     return tahun;
 }
+
 void tampilMenu() {
     printf("\n"MAGENTA"=======================================\n");
     printf("|    MENU PENGELOLAAN PERPUSTAKAAN    |\n");
@@ -54,6 +55,7 @@ void tampilMenu() {
     printf(MAGENTA"=======================================\n"RESET);
     printf(BLUE"Pilih Menu: "RESET);
 }
+
 void tambahBuku() {
     struct Buku b;
     b.id = jumlah + 1;
