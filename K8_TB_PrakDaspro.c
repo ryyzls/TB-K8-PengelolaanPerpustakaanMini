@@ -265,3 +265,18 @@ void muatFile() {
     fclose(file);
     printf(GREEN"Data berhasil dimuat dari file!\n"RESET);
 }
+
+void prosesPilihan(int pilih) {
+    if(pilih == 1) {
+        tambahBuku();         
+    } else if(pilih == 2) {
+        tampilkanBuku();      
+    } else if(pilih == 3) {
+        hapusBuku();          
+    } else if(pilih == 4) {
+        editBuku();           
+    } else if(pilih == 5) {
+        cariBuku();           
+    } else if(pilih == 6) {
+        simpanFile();
+    }
