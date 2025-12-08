@@ -10,9 +10,7 @@
 #define CYAN    "\x1b[36m"
 #define RESET   "\x1b[0m"
 
-// =======================
-// Rasyid, Dwi: FUNGSI
-// =======================
+
 
 void tambahBuku() {
     struct Buku b;
@@ -174,3 +172,4 @@ void cariBuku() {
 
     if(!ditemukan) printf(RED"Tidak ada buku yang cocok.\n"RESET);
 }
+
