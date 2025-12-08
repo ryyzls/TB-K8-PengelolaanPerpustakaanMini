@@ -287,3 +287,23 @@ void prosesPilihan(int pilih) {
         printf(RED"Menu tidak valid!\n"RESET);
     }
 }
+// =======================
+// Dwi: PERULANGAN
+// =======================
+void loopProgram() {
+    int pilih;
+    do {
+        tampilMenu();           // Orang 1
+        scanf("%d", &pilih);
+        getchar();
+        prosesPilihan(pilih);   // Orang 3
+    } while(pilih != 0);
+}
+
+// =======================
+// PROGRAM UTAMA
+// =======================
+int main() {
+    loopProgram();   // Orang 4
+    return 0;
+}
