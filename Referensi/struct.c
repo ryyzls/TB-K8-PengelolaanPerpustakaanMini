@@ -22,3 +22,4 @@ struct Buku {
 
 struct Buku daftar[MAX];
 int jumlah = 0;
+
