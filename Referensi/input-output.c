@@ -29,3 +29,19 @@ int inputTahun() {
     getchar();
     return tahun;
 }
+
+void tampilMenu() {
+    printf("\n"MAGENTA"=======================================\n");
+    printf("|    MENU PENGELOLAAN PERPUSTAKAAN    |\n");
+    printf("=======================================\n"RESET);
+    printf(MAGENTA"|"RESET YELLOW" 1. Tambah Buku                      "RESET MAGENTA"|\n"RESET);
+    printf(MAGENTA"|"RESET YELLOW" 2. Lihat Semua Buku                 "RESET MAGENTA"|\n"RESET);
+    printf(MAGENTA"|"RESET YELLOW" 3. Hapus Buku                       "RESET MAGENTA"|\n"RESET);
+    printf(MAGENTA"|"RESET YELLOW" 4. Edit Buku                        "RESET MAGENTA"|\n"RESET);
+    printf(MAGENTA"|"RESET YELLOW" 5. Cari Buku                        "RESET MAGENTA"|\n"RESET);
+    printf(MAGENTA"|"RESET YELLOW" 6. Simpan ke File                   "RESET MAGENTA"|\n"RESET);
+    printf(MAGENTA"|"RESET YELLOW" 7. Load dari File                   "RESET MAGENTA"|\n"RESET);
+    printf(MAGENTA"|"RESET RED" 0. Keluar                           "RESET MAGENTA"|\n"RESET);
+    printf(MAGENTA"=======================================\n"RESET);
+    printf(BLUE"Pilih Menu: "RESET);
+}
