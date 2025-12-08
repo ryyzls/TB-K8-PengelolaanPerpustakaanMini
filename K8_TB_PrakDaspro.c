@@ -87,3 +87,80 @@ void tampilkanBuku() {
     }
     printf(BLUE"======================================================================\n"RESET);
 }
+
+void hapusBuku() {
+    int id;
+    printf(YELLOW"Masukkan ID buku yang ingin dihapus: "RESET);
+    scanf("%d", &id);
+    getchar();
+
+    int index = -1;
+    for(int i=0; i<jumlah; i++) {
+        if(daftar[i].id == id) {
+            index = i;
+            break;
+        }
+    }
+
+    if(index == -1) {
+        printf(RED"ID tidak ditemukan!\n"RESET);
+        return;
+    }
+
+    for(int i=index; i<jumlah-1; i++) {
+        daftar[i] = daftar[i+1];
+        daftar[i].id = i + 1;
+    }
+
+    jumlah--;
+    printf(GREEN"Buku berhasil dihapus!\n"RESET);
+}
+
+void editBuku() {
+    int id;
+    printf(YELLOW"Masukkan ID buku yang ingin diedit: "RESET);
+    scanf("%d", &id);
+    getchar();
+
+    int index = -1;
+    for(int i=0; i<jumlah; i++) {
+        if(daftar[i].id == id) {
+            index = i;
+            break;
+        }
+    }
+
+    if(index == -1) {
+        printf(RED"ID tidak ditemukan!\n"RESET);
+        return;
+    }
+
+    inputJudul(daftar[index].judul);
+    inputPenulis(daftar[index].penulis);
+    daftar[index].tahun = inputTahun();
+
+    printf(GREEN"Buku berhasil diedit!\n"GREEN);
+}
+
+void cariBuku() {
+    if(jumlah == 0) {
+        printf(RED"Tidak ada buku untuk dicari.\n"RED);
+        return;
+    }
+
+    int pilih;
+    printf("\n"BLUE"======================\n");
+    printf("| Cari Berdasarkan:  |\n");
+    printf("======================\n"RESET);
+    printf(BLUE"|"RESET YELLOW" 1. Judul Buku      "RESET BLUE"|\n"RESET);
+    printf(BLUE"|"RESET YELLOW" 2. Penulis         "RESET BLUE"|\n"RESET);
+    printf(BLUE"|"RESET YELLOW" 3. Tahun           "RESET BLUE"|\n"RESET);
+    printf(BLUE"|"RESET MAGENTA" 4. Kembali ke Menu "RESET BLUE"|\n"RESET);
+    printf(BLUE"======================\n"RESET);
+    printf(BLUE"Pilih: "RESET);
+    scanf("%d", &pilih);
+    getchar();
+
+    if(pilih == 4) {
+        return;
+    }
