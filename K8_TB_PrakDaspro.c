@@ -257,7 +257,34 @@ void simpanFile()
     printf(GREEN "Data berhasil disimpan ke file!\n" RESET);
 }
 
+void muatFile()
+{
+    FILE *file = fopen("buku.txt", "r");
+    if (file == NULL)
+    {
+        printf(RED "File tidak ditemukan.\n" RESET);
+        return;
+    }
 
+    jumlah = 0;
+    char baris[200];
+
+    while (fgets(baris, sizeof(baris), file) != NULL)
+    {
+        struct Buku b;
+
+        // parsing dari format: id|judul|penulis|tahun
+        if (sscanf(baris, "%d|%49[^|]|%49[^|]|%d",
+                   &b.id, b.judul, b.penulis, &b.tahun) == 4)
+        {
+            daftar[jumlah] = b;
+            jumlah++;
+        }
+    }
+
+    fclose(file);
+    printf(GREEN "Data berhasil dimuat dari file!\n" RESET);
+}
 
 void prosesPilihan(int pilih) 
 {
