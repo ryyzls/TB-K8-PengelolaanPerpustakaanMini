@@ -9,3 +9,15 @@
 #define MAGENTA "\x1b[35m"
 #define CYAN    "\x1b[36m"
 #define RESET   "\x1b[0m"
+
+void inputJudul(char *judul) {
+    printf(YELLOW"Masukkan Judul Buku   : "RESET);
+    fgets(judul, 50, stdin);
+    judul[strcspn(judul, "\n")] = 0;
+}
+
+void inputPenulis(char *penulis) {
+    printf(YELLOW"Masukkan Penulis      : "RESET);
+    fgets(penulis, 50, stdin);
+    penulis[strcspn(penulis, "\n")] = 0;
+}
