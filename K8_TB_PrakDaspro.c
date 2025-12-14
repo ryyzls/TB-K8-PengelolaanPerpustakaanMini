@@ -309,18 +309,14 @@ void prosesPilihan(int pilih)
     }
 }
 
-void loopProgram() {
+int main() {
     int pilih;
     do {
-        tampilMenu();           // Orang 1
+        tampilMenu();        
         scanf("%d", &pilih);
         getchar();
-        prosesPilihan(pilih);   // Orang 3
+        prosesPilihan(pilih);   
     } while(pilih != 0);
-}
-
-// PROGRAM UTAMA
-int main() {
-    loopProgram();   // Orang 4
+      
     return 0;
 }
